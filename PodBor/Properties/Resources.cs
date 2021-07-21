@@ -1,0 +1,4 @@
+﻿namespace PodBor.Properties
+{
+
+}

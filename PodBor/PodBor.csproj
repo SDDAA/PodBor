@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1C1776D-63C6-4A69-B7F7-EB9B33B7DE73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PodBor</RootNamespace>
+    <AssemblyName>PodBor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PodBor.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.21\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BZ.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Загрузка.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Загрузка.Designer.cs">
+      <DependentUpon>Загрузка.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная.Designer.cs">
+      <DependentUpon>Главная.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Поиск.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Поиск.Designer.cs">
+      <DependentUpon>Поиск.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Личный кабинет.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Личный кабинет.Designer.cs">
+      <DependentUpon>Личный кабинет.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.Designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список лекарств.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список лекарств.Designer.cs">
+      <DependentUpon>Список лекарств.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Инфо-лекарство.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Инфо-лекарство.Designer.cs">
+      <DependentUpon>Инфо-лекарство.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор.Designer.cs">
+      <DependentUpon>Администратор.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaitFormFunc.cs" />
+    <Compile Include="Аналоги.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Аналоги.Designer.cs">
+      <DependentUpon>Аналоги.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Администратор.resx">
+      <DependentUpon>Администратор.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Аналоги.resx">
+      <DependentUpon>Аналоги.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Загрузка.resx">
+      <DependentUpon>Загрузка.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная.resx">
+      <DependentUpon>Главная.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Поиск.resx">
+      <DependentUpon>Поиск.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Личный кабинет.resx">
+      <DependentUpon>Личный кабинет.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список лекарств.resx">
+      <DependentUpon>Список лекарств.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Инфо-лекарство.resx">
+      <DependentUpon>Инфо-лекарство.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\user.png" />
+    <None Include="bin\Debug\img\Заболевания\Горло.png" />
+    <None Include="bin\Debug\img\Заболевания\Изжога.png" />
+    <None Include="bin\Debug\img\Заболевания\кашель.png" />
+    <None Include="bin\Debug\img\Заболевания\Кожа.png" />
+    <None Include="bin\Debug\img\Заболевания\Насморк.png" />
+    <None Include="bin\Debug\img\Заболевания\Пищеварение.png" />
+    <None Include="bin\Debug\img\Заболевания\Простуда.png" />
+    <None Include="bin\Debug\img\Заболевания\Самочувствие.png" />
+    <None Include="bin\Debug\img\Заболевания\Сердце.png" />
+    <None Include="bin\Debug\img\Заболевания\СИЗ.png" />
+    <None Include="bin\Debug\img\Заболевания\Сон.png" />
+    <None Include="bin\Debug\img\Заболевания\Температура.png" />
+    <None Include="bin\Debug\img\Заболевания\Акне.png" />
+    <None Include="bin\Debug\img\Заболевания\Аллергия.png" />
+    <None Include="bin\Debug\img\Заболевания\Голова.png" />
+    <None Include="bin\Debug\img\load.gif" />
+    <None Include="bin\Debug\img\Оформление Форм\main.png" />
+    <None Include="bin\Debug\img\Кнопки\Выход.png" />
+    <None Include="bin\Debug\img\Кнопки\Натйи лекарство.png" />
+    <None Include="bin\Debug\img\Кнопки\user.png" />
+    <None Include="bin\Debug\img\Кнопки\magnifier-1_icon-icons.com_56924.png" />
+    <None Include="bin\Debug\img\Оформление Форм\analog.png" />
+    <None Include="bin\Debug\img\Оформление Форм\Logo.png" />
+    <None Include="bin\Debug\img\Оформление Форм\Border.png" />
+    <None Include="bin\Debug\img\Кнопки\home.png" />
+    <None Include="bin\Debug\img\Кнопки\Search.png" />
+    <None Include="bin\Debug\img\Кнопки\back_1.png" />
+    <None Include="bin\Debug\img\Кнопки\нет.png" />
+    <None Include="bin\Debug\img\Кнопки\Да.png" />
+    <None Include="bin\Debug\img\Кнопки\Искать.png" />
+    <None Include="bin\Debug\img\Кнопки\Поиск лекарств.png" />
+    <None Include="bin\Debug\img\Кнопки\Поиск лекарств_1.png" />
+    <None Include="bin\Debug\img\Кнопки\Выход_1.png" />
+    <None Include="bin\Debug\img\Кнопки\Да_1.png" />
+    <None Include="bin\Debug\img\Кнопки\Искать_1.png" />
+    <None Include="bin\Debug\img\Кнопки\нет_1.png" />
+    <None Include="bin\Debug\img\Кнопки\back_2.png" />
+    <None Include="bin\Debug\img\Кнопки\Login.png" />
+    <None Include="bin\Debug\img\Оформление Форм\Head.png" />
+    <None Include="bin\Debug\img\Оформление Форм\admin.png" />
+    <None Include="bin\Debug\img\Кнопки\OpenFile.png" />
+    <None Include="bin\Debug\img\Кнопки\Корзина.png" />
+    <None Include="bin\Debug\img\Кнопки\meds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\UserPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
